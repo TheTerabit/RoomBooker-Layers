@@ -1,4 +1,4 @@
-package pl.bs.RoomBookerDDD;
+package pl.bs.roomBooker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

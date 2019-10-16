@@ -1,4 +1,4 @@
-package pl.bs.RoomBookerDDD;
+package pl.bs.roomBooker;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,24 +1,393 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleLocalSettings">
-    <option name="projectSyncType">
-      <map>
-        <entry key="$USER_HOME$/Desktop/rekrutacja-allegro/allegro-merchant" value="PREVIEW" />
-        <entry key="$USER_HOME$/Desktop/rekrutacja-allegro/allegro-repos" value="PREVIEW" />
-      </map>
+  <component name="ChangeListManager">
+    <list default="true" id="3908f897-2c3c-4a95-a446-def465108784" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/NotFoundRoomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/NotFoundRoomException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/NotFoundUserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/NotFoundUserException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/ReservationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/ReservationEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/RoomEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/RoomEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/UserEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/UserEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/RoomMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/RoomMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/UserMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/UserMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/JobTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/JobTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/RoomLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/RoomLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/JobTitleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/JobTitleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/RoomLocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/RoomLocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/RoomRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserAddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserAddressRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserPasswordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserPasswordRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/RoomBookerDDD.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/api/ReservationEndpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/api/RoomEndpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/api/UserEndpoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/api/msg/RoomMsg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/config/StorageConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/domain/room/NotFoundRoomException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/domain/room/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/domain/room/RoomRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/domain/room/RoomService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/infrastructure/h2/H2RoomRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/infrastructure/spring/SpringJpaRoomRepository.class" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/UserMsg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Company.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/CompanyRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1329#1330#0" expanded="true" />
+                <element signature="e#1376#1377#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/JobTitleRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserContactRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserAddressRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="71" lean-forward="true" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1738#1739#0" expanded="true" />
+                <element signature="e#1766#1767#0" expanded="true" />
+                <element signature="e#1814#1815#0" expanded="true" />
+                <element signature="e#1854#1855#0" expanded="true" />
+                <element signature="e#1894#1895#0" expanded="true" />
+                <element signature="e#1926#1927#0" expanded="true" />
+                <element signature="e#1972#1973#0" expanded="true" />
+                <element signature="e#2010#2011#0" expanded="true" />
+                <element signature="e#2072#2073#0" expanded="true" />
+                <element signature="e#2120#2121#0" expanded="true" />
+                <element signature="e#2179#2180#0" expanded="true" />
+                <element signature="e#2225#2226#0" expanded="true" />
+                <element signature="e#2284#2285#0" expanded="true" />
+                <element signature="e#2330#2331#0" expanded="true" />
+                <element signature="e#2377#2378#0" expanded="true" />
+                <element signature="e#2415#2416#0" expanded="true" />
+                <element signature="e#2465#2466#0" expanded="true" />
+                <element signature="e#2505#2506#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/JobTitle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/SpringJpaRoomRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/RoomMsg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/RoomLocationRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/RoomLocation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/NotFoundUserException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserPassword.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserPasswordRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserAddress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserContact.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Room.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/RoomRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/UserMsg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserAddressRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserContactRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/UserEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Company.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/JobTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/JobTitleRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/CompanyRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/UserService.java" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="127" />
-    <option name="y" value="87" />
+    <option name="x" value="125" />
+    <option name="y" value="85" />
     <option name="width" value="975" />
-    <option name="height" value="1034" />
+    <option name="height" value="1035" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="roomBooker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="roomBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="roomBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="msg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="roomBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="roomBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="roomBooker" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RoomBookerLayers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoomBookerLayers" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571316805045" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="pl.bs.roomBooker" />
+      <recent name="pl.bs.roomBooker.service" />
+      <recent name="pl.bs.roomBooker.models" />
+      <recent name="pl.bs.roomBooker.repository" />
+      <recent name="pl.bs.roomBooker.controllers.msg" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pl.bs.roomBooker.models" />
+      <recent name="pl.bs.roomBooker" />
+      <recent name="pl.bs.roomBooker.repository" />
+      <recent name="pl.bs.roomBooker.controllers.msg" />
+      <recent name="pl.bs.roomBooker.service" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="RoomBookerDddApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -28,6 +397,396 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3908f897-2c3c-4a95-a446-def465108784" name="Default Changelist" comment="" />
+      <created>1571232421432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571232421432</updated>
+      <workItem from="1571232424567" duration="5697000" />
+      <workItem from="1571242102693" duration="1085000" />
+      <workItem from="1571261319295" duration="10650000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17432000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.23154363" />
+      <window_info id="Azure Explorer" order="7" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32909605" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="8" />
+      <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32909605" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="15" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.32909605" />
+      <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="17" />
+      <window_info anchor="bottom" id="Azure Activity Log" order="18" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.23154363" />
+      <window_info id="Azure Explorer" order="7" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32909605" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="8" />
+      <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Terminal" order="15" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Messages" order="16" />
+      <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="17" />
+      <window_info anchor="bottom" id="Azure Activity Log" order="18" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/RoomLocationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/ReservationEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/RoomEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/NotFoundRoomException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="1" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/RoomMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="5" selection-start-line="8" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/NotFoundUserException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserContact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserPasswordRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="82" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserPassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/RoomRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/UserEndpoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/UserAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/RoomLocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#614#615#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserAddressRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="71" lean-forward="true" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/UserContactRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/UserMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1738#1739#0" expanded="true" />
+            <element signature="e#1766#1767#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1854#1855#0" expanded="true" />
+            <element signature="e#1894#1895#0" expanded="true" />
+            <element signature="e#1926#1927#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2010#2011#0" expanded="true" />
+            <element signature="e#2072#2073#0" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+            <element signature="e#2179#2180#0" expanded="true" />
+            <element signature="e#2225#2226#0" expanded="true" />
+            <element signature="e#2284#2285#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2377#2378#0" expanded="true" />
+            <element signature="e#2415#2416#0" expanded="true" />
+            <element signature="e#2465#2466#0" expanded="true" />
+            <element signature="e#2505#2506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/JobTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/JobTitleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/CompanyRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

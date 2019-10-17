@@ -1,21 +1,25 @@
-package pl.bs.roomBooker.domain.room;
+package pl.bs.roomBooker.service;
 
 import org.springframework.stereotype.Service;
-import pl.bs.roomBooker.api.msg.RoomMsg;
+import pl.bs.roomBooker.controllers.msg.RoomMsg;
+import pl.bs.roomBooker.NotFoundRoomException;
+import pl.bs.roomBooker.models.Room;
+import pl.bs.roomBooker.models.RoomLocation;
+import pl.bs.roomBooker.repository.RoomLocationRepository;
+import pl.bs.roomBooker.repository.RoomRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class RoomService {
-    public List<Room> getAllRooms() {
-        return new ArrayList<>();
-    }
 
     private final RoomRepository roomRepository;
+    private final RoomLocationRepository roomLocationRepository;
 
-    public RoomService(RoomRepository roomRepository) {
+    public RoomService(RoomRepository roomRepository, RoomLocationRepository roomLocationRepository) {
         this.roomRepository = roomRepository;
+        this.roomLocationRepository = roomLocationRepository;
     }
 
     public Room findById(Long id) {
@@ -25,11 +29,18 @@ public class RoomService {
 
     public void create(RoomMsg roomMsg) {
         //if()
-        roomRepository.create(new Room(roomMsg.getId(), roomMsg.getName()));
+        Room room = new Room(roomMsg.getId(),
+                roomMsg.getName(),
+                roomMsg.getRoomSize());
+        roomRepository.save(room);
+
+        roomLocationRepository.save(new RoomLocation(room.getRoomId(),
+                                                roomMsg.getFloor(),
+                                                roomMsg.getSector()));
     }
 
     public void delete(Long id) {
-        roomRepository.delete(id);
+        roomRepository.deleteById(id);
     }
 
     public List<Room> getAll() {

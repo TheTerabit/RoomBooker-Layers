@@ -1,4 +1,4 @@
-package pl.bs.roomBooker.api;
+package pl.bs.roomBooker.controllers;
 
 public class ReservationEndpoint {
 

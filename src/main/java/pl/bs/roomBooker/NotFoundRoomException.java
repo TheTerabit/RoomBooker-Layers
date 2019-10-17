@@ -1,4 +1,4 @@
-package pl.bs.roomBooker.domain.room;
+package pl.bs.roomBooker;
 
 public class NotFoundRoomException extends RuntimeException {
 

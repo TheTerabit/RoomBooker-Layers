@@ -1,11 +1,14 @@
-package pl.bs.roomBooker.infrastructure.spring;
+package pl.bs.roomBooker.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import pl.bs.roomBooker.domain.room.Room;
+import org.springframework.stereotype.Repository;
+import pl.bs.roomBooker.models.Room;
 
 import java.util.Optional;
 
-public interface SpringJpaRoomRepository extends JpaRepository<Room, Long> {
+@Repository
+public interface RoomRepository extends JpaRepository<Room, Long> {
+    
     @Override
     Optional<Room> findById(Long id);
 

@@ -1,9 +1,6 @@
-package pl.bs.roomBooker.domain.room;
+package pl.bs.roomBooker.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
 import java.util.Objects;
 
 
@@ -11,16 +8,21 @@ import java.util.Objects;
 public class Room {
 
     @Id
-    @SequenceGenerator(name = "mySeqGen", sequenceName = "mySeq", initialValue = 0, allocationSize = 100)
-    @GeneratedValue(generator = "mySeqGen")
+    @SequenceGenerator(name = "myRoomSeqGen", sequenceName = "myRoomSeq", initialValue = 0, allocationSize = 100)
+    @GeneratedValue(generator = "myRoomSeqGen")
+    @Column(name = "id")
     private Long roomId;
     private String name;
     private Integer roomSize;
+    @OneToOne
+    @JoinColumn(name="id", referencedColumnName = "id")
     private RoomLocation roomLocation;
 
-    public Room(Long roomId, String name) {
+
+    public Room(Long roomId, String name, Integer roomSize) {
         this.roomId = roomId;
         this.name = name;
+        this.roomSize = roomSize;
     }
 
     public Room() {
@@ -32,6 +34,14 @@ public class Room {
 
     public String getName() {
         return name;
+    }
+
+    public Integer getRoomSize() {
+        return roomSize;
+    }
+
+    public RoomLocation getRoomLocation() {
+        return roomLocation;
     }
 
     @Override

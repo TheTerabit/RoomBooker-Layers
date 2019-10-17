@@ -1,6 +1,8 @@
 package pl.bs.roomBooker;
 
-public class NotFoundUserException extends X {
-    public NotFoundUserException(String format) {
+public class NotFoundUserException extends RuntimeException {
+
+    public NotFoundUserException(String message) {
+        super(message);
     }
 }

@@ -23,7 +23,7 @@ public class ReservationEndpoint {
     }
 
     @PostMapping
-    public void create(@RequestBody ReservationMsg reservationMsg) {
+    public void create(@RequestBody ReservationMsg reservationMsg) throws Exception {
         this.reservationService.create(reservationMsg);
     }
 

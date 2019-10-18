@@ -22,21 +22,29 @@ public class ReservationValidator {
         this.userRepository = userRepository;
     }
 
-    public void setReservationMsg(ReservationMsg reservationMsg) {
+    public void validate(ReservationMsg reservationMsg) throws Exception {
+        this.setReservationMsg(reservationMsg);
+        this.authenticateUser();
+        this.checkIfStartBeforeEnd();
+        this.checkReservationLength();
+        this.checkIfRoomIsFree();
+    }
+
+    private void setReservationMsg(ReservationMsg reservationMsg) {
         this.reservationMsg = reservationMsg;
     }
 
-    public void checkIfStartBeforeEnd() throws Exception {
+    private void checkIfStartBeforeEnd() throws Exception {
         if(reservationMsg.getStart().isAfter(reservationMsg.getEnd()))
             throw new Exception("End of the meeting must be after its start.");
     }
 
-    public void checkReservationLength() throws Exception {
+    private void checkReservationLength() throws Exception {
         if(!this.checkEventLength(reservationMsg.getStart(), reservationMsg.getEnd()))
             throw new Exception("Duration of the meeting must be 15 - 120 minutes.");
     }
 
-    public void checkIfRoomIsFree() throws Exception {
+    private void checkIfRoomIsFree() throws Exception {
         if(!checkIfFree(reservationMsg.getStart(), reservationMsg.getEnd(), roomRepository.findById(reservationMsg.getRoomId()).get().getReservations()))
             throw new Exception("The conference room is already occupied.");
     }
@@ -57,9 +65,11 @@ public class ReservationValidator {
             return false;
     }
 
-    public void authenticateUser() throws Exception {
+    private void authenticateUser() throws Exception {
         if(!this.reservationMsg.getPassword().equals(this.userRepository.findById(reservationMsg.getUserId()).get().getUserPassword().getPassword()))
             throw new Exception("Wrong username or password.");
     }
+
+
 }
 

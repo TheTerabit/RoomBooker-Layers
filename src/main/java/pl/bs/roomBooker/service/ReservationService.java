@@ -26,18 +26,12 @@ public class ReservationService {
 
     public Reservation findById(Long id) {
         return reservationRepository.findById(id)
-                .orElseThrow(() -> new NotFoundReservationException(String.format("User %s does not exist", id)));
+                .orElseThrow(() -> new NotFoundReservationException(String.format("Reservation %s does not exist", id)));
     }
 
     public void create(ReservationMsg reservationMsg) throws Exception {
-        //if()
-        this.reservationValidator.setReservationMsg(reservationMsg);
 
-        this.reservationValidator.authenticateUser();
-        this.reservationValidator.checkIfStartBeforeEnd();
-        this.reservationValidator.checkReservationLength();
-        this.reservationValidator.checkIfRoomIsFree();
-
+        this.reservationValidator.validate(reservationMsg);
 
         Topic topic = topicRepository.findByTopicName(reservationMsg.getTopic());
         if(topic == null){

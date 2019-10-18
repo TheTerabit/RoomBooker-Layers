@@ -36,7 +36,7 @@ public class User {
     private JobTitle jobTitle;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name="id", referencedColumnName = "userId")
+    @JoinColumn(name="userId", referencedColumnName = "id")
     private List<Reservation> reservations;
 
 

@@ -2,13 +2,11 @@ package pl.bs.roomBooker.service;
 
 import org.springframework.stereotype.Service;
 import pl.bs.roomBooker.controllers.msg.RoomMsg;
-import pl.bs.roomBooker.NotFoundRoomException;
-import pl.bs.roomBooker.models.Room;
-import pl.bs.roomBooker.models.RoomLocation;
-import pl.bs.roomBooker.repository.RoomLocationRepository;
-import pl.bs.roomBooker.repository.RoomRepository;
+import pl.bs.roomBooker.models.room.Room;
+import pl.bs.roomBooker.models.room.RoomLocation;
+import pl.bs.roomBooker.repository.room.RoomLocationRepository;
+import pl.bs.roomBooker.repository.room.RoomRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

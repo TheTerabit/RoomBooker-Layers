@@ -1,17 +1,11 @@
 package pl.bs.roomBooker.service;
 
-import org.springframework.boot.autoconfigure.batch.BatchProperties;
 import org.springframework.stereotype.Service;
-import pl.bs.roomBooker.NotFoundRoomException;
-import pl.bs.roomBooker.NotFoundUserException;
-import pl.bs.roomBooker.controllers.msg.RoomMsg;
 import pl.bs.roomBooker.controllers.msg.UserMsg;
-import pl.bs.roomBooker.models.*;
-import pl.bs.roomBooker.repository.*;
+import pl.bs.roomBooker.models.user.*;
+import pl.bs.roomBooker.repository.user.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserService {

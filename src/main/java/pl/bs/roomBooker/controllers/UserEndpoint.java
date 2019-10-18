@@ -1,11 +1,8 @@
 package pl.bs.roomBooker.controllers;
 
 import org.springframework.web.bind.annotation.*;
-import pl.bs.roomBooker.controllers.msg.RoomMsg;
 import pl.bs.roomBooker.controllers.msg.UserMsg;
-import pl.bs.roomBooker.models.Room;
-import pl.bs.roomBooker.models.User;
-import pl.bs.roomBooker.service.RoomService;
+import pl.bs.roomBooker.models.user.User;
 import pl.bs.roomBooker.service.UserService;
 
 import java.util.List;

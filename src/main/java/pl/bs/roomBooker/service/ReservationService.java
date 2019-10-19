@@ -41,7 +41,7 @@ public class ReservationService {
         topicRepository.save(topic);
 
 
-        Reservation reservation = new Reservation(reservationMsg.getUserId(),
+        Reservation reservation = new Reservation(reservationMsg.getUsername(),
                                         reservationMsg.getRoomId(),
                                         reservationMsg.getStart(),
                                         reservationMsg.getEnd());

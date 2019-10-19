@@ -18,7 +18,7 @@ public class Reservation {
     private Long reservationId;
 
     @Column(name = "userId")
-    private Long userId;
+    private String username;
 
     @Column(name = "roomId")
     private Long roomId;
@@ -33,8 +33,8 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(Long userId, Long roomId, ZonedDateTime start, ZonedDateTime end) {
-        this.userId = userId;
+    public Reservation(String username, Long roomId, ZonedDateTime start, ZonedDateTime end) {
+        this.username = username;
         this.roomId = roomId;
         this.start = start;
         this.end = end;
@@ -48,12 +48,12 @@ public class Reservation {
         this.reservationId = reservationId;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Long getRoomId() {

@@ -66,7 +66,7 @@ public class ReservationValidator {
     }
 
     private void authenticateUser() throws Exception {
-        if(!this.reservationMsg.getPassword().equals(this.userRepository.findById(reservationMsg.getUserId()).get().getUserPassword().getPassword()))
+        if(!this.reservationMsg.getPassword().equals(this.userRepository.findByUsername(reservationMsg.getUsername()).get().getUserPassword().getPassword()))
             throw new Exception("Wrong username or password.");
     }
 

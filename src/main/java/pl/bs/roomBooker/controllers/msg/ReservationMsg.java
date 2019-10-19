@@ -8,7 +8,7 @@ import java.time.ZonedDateTime;
 
 @Getter
 public class ReservationMsg {
-    private final Long userId;
+    private final String username;
     private final String password;
     private final Long roomId;
     private final String topic;
@@ -16,13 +16,13 @@ public class ReservationMsg {
     private final ZonedDateTime end;
 
     @JsonCreator
-    public ReservationMsg(@JsonProperty("userId") Long userId,
+    public ReservationMsg(@JsonProperty("username") String username,
                           @JsonProperty("password") String password,
                           @JsonProperty("roomId") Long roomId,
                           @JsonProperty("topic") String topic,
                           @JsonProperty("start") ZonedDateTime start,
                           @JsonProperty("end") ZonedDateTime end) {
-        this.userId = userId;
+        this.username = username;
         this.password = password;
         this.roomId = roomId;
         this.topic = topic;

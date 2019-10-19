@@ -3,17 +3,18 @@ package pl.bs.roomBooker.models.user;
 import pl.bs.roomBooker.models.reservation.Reservation;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class User {
+public class User implements Serializable {
 
     @Id
     @SequenceGenerator(name = "myUserGen", sequenceName = "myUserSeq", initialValue = 0, allocationSize = 100)
     @GeneratedValue(generator = "myUserGen")
     @Column(name = "id")
     private Long id;
-    @Column(unique=true)
+    @Column(unique=true, name = "username")
     private String username;
     private String name;
     private String surname;
@@ -36,7 +37,7 @@ public class User {
     private JobTitle jobTitle;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name="userId", referencedColumnName = "id")
+    @JoinColumn(name="username", referencedColumnName = "username")
     private List<Reservation> reservations;
 
 

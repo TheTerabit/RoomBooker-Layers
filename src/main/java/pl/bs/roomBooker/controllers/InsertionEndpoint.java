@@ -18,3 +18,4 @@ public class InsertionEndpoint {
         this.insertionService.initData();
     }
 }
+//

@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3908f897-2c3c-4a95-a446-def465108784" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/InsertionEndpoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/InsertionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/ReservationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/ReservationEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/UserEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/UserEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/RoomMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/RoomMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/reservation/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/reservation/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/room/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/reservation/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/reservation/ReservationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/ReservationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/ReservationValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/controllers/ReservationEndpoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/bs/roomBooker/controllers/ReservationEndpoint.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/InsertionEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="340">
+              <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#391#392#0" expanded="true" />
@@ -120,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/InsertionService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+            <state relative-caret-position="-11">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -224,8 +210,8 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/room/Room.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/RoomMsg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/InsertionEndpoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/InsertionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/InsertionEndpoint.java" />
       </list>
     </option>
   </component>
@@ -368,7 +354,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572276616027" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572277955156" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -426,12 +412,12 @@
       <workItem from="1571644405447" duration="6918000" />
       <workItem from="1571832881312" duration="1010000" />
       <workItem from="1571866761118" duration="608000" />
-      <workItem from="1572273049148" duration="3542000" />
+      <workItem from="1572273049148" duration="5157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47147000" />
+    <option name="totallyTimeSpent" value="48762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
@@ -443,7 +429,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Web" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.24832214" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.24832214" />
       <window_info id="Azure Explorer" order="7" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -458,9 +444,9 @@
       <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32909605" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32909605" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Terminal" order="15" weight="0.32909605" />
       <window_info anchor="bottom" id="Messages" order="16" weight="0.32909605" />
       <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="17" />
@@ -992,26 +978,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/InsertionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/InsertionEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="340">
+          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#391#392#0" expanded="true" />
             <element signature="e#447#448#0" expanded="true" />
             <element signature="e#269#270#0" expanded="true" />
             <element signature="e#288#289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/InsertionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

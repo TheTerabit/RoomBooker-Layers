@@ -2,6 +2,7 @@ package pl.bs.roomBooker.controllers;
 
 import org.springframework.web.bind.annotation.*;
 import pl.bs.roomBooker.controllers.msg.UserMsg;
+import pl.bs.roomBooker.models.user.Company;
 import pl.bs.roomBooker.models.user.User;
 import pl.bs.roomBooker.service.UserService;
 
@@ -35,5 +36,10 @@ public class UserEndpoint {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Long id) {
         this.userService.delete(id);
+    }
+
+    @GetMapping("/new")
+    public List<Company> findAllCompanies(){
+        return this.userService.getAllCompanies();
     }
 }

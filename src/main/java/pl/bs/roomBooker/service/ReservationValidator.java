@@ -3,6 +3,8 @@ package pl.bs.roomBooker.service;
 import org.springframework.stereotype.Service;
 import pl.bs.roomBooker.controllers.msg.ReservationMsg;
 import pl.bs.roomBooker.models.reservation.Reservation;
+import pl.bs.roomBooker.models.user.User;
+import pl.bs.roomBooker.repository.reservation.ReservationRepository;
 import pl.bs.roomBooker.repository.room.RoomRepository;
 import pl.bs.roomBooker.repository.user.UserRepository;
 
@@ -16,10 +18,12 @@ public class ReservationValidator {
     private ReservationMsg reservationMsg;
     private final RoomRepository roomRepository;
     private final UserRepository userRepository;
+    private final ReservationRepository reservationRepository;
 
-    public ReservationValidator(RoomRepository roomRepository, UserRepository userRepository) {
+    public ReservationValidator(RoomRepository roomRepository, UserRepository userRepository, ReservationRepository reservationRepository) {
         this.roomRepository = roomRepository;
         this.userRepository = userRepository;
+        this.reservationRepository = reservationRepository;
     }
 
     public void validate(ReservationMsg reservationMsg) throws Exception {
@@ -45,6 +49,8 @@ public class ReservationValidator {
     }
 
     private void checkIfRoomIsFree() throws Exception {
+        System.out.println(reservationMsg.getStart() + " " + reservationMsg.getEnd());
+        System.out.println(reservationMsg.getRoomId() + " " + roomRepository.findById(reservationMsg.getRoomId()));
         if(!checkIfFree(reservationMsg.getStart(), reservationMsg.getEnd(), roomRepository.findById(reservationMsg.getRoomId()).get().getReservations()))
             throw new Exception("The conference room is already occupied.");
     }
@@ -66,10 +72,33 @@ public class ReservationValidator {
     }
 
     private void authenticateUser() throws Exception {
+        for (User i : this.userRepository.findAll()){
+            System.out.println(i.getUsername());
+        }
         if(!this.reservationMsg.getPassword().equals(this.userRepository.findByUsername(reservationMsg.getUsername()).get().getUserPassword().getPassword()))
             throw new Exception("Wrong username or password.");
     }
 
 
+    public void validateUpdate(Long id, ReservationMsg reservationMsg) throws Exception {
+        this.setReservationMsg(reservationMsg);
+        this.authenticateUser();
+        this.checkIfStartBeforeEnd();
+        this.checkReservationLength();
+        this.checkIfRoomIsFree(id);
+        this.checkReservationOwner(id);
+    }
+
+    private void checkIfRoomIsFree(Long id) throws Exception {
+        List<Reservation> reservations = roomRepository.findById(reservationMsg.getRoomId()).get().getReservations();
+        reservations.remove(id);
+        if(!checkIfFree(reservationMsg.getStart(), reservationMsg.getEnd(), reservations))
+            throw new Exception("The conference room is already occupied.");
+    }
+
+    private void checkReservationOwner(Long id) throws Exception {
+        if(!reservationRepository.findById(id).get().getUsername().equals(reservationMsg.getUsername()))
+            throw new Exception("You are not the owner of this event");
+    }
 }
 

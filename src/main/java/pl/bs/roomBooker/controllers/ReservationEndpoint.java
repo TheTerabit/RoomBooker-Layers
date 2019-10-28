@@ -3,7 +3,9 @@ package pl.bs.roomBooker.controllers;
 import org.springframework.web.bind.annotation.*;
 import pl.bs.roomBooker.controllers.msg.ReservationMsg;
 import pl.bs.roomBooker.models.reservation.Reservation;
+import pl.bs.roomBooker.models.room.Room;
 import pl.bs.roomBooker.service.ReservationService;
+import pl.bs.roomBooker.service.RoomService;
 
 import java.util.List;
 
@@ -12,9 +14,11 @@ import java.util.List;
 public class ReservationEndpoint {
 
     private final ReservationService reservationService;
+    private final RoomService roomService;
 
-    public ReservationEndpoint(ReservationService reservationService) {
+    public ReservationEndpoint(ReservationService reservationService, RoomService roomService) {
         this.reservationService = reservationService;
+        this.roomService = roomService;
     }
 
     @GetMapping
@@ -37,6 +41,14 @@ public class ReservationEndpoint {
         this.reservationService.delete(id);
     }
 
-    //update
+    @PutMapping("/{id}")
+    public void update(@PathVariable("id") Long id, ReservationMsg reservationMsg) throws Exception {
+        this.reservationService.update(id, reservationMsg);
+    }
+
+    @GetMapping("/new")
+    public List<Room> getAllRooms(){
+        return this.roomService.getAll();
+    }
 
 }

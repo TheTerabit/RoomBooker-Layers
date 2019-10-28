@@ -87,6 +87,10 @@ public class Reservation {
     public void setTopic(Topic topic) {
         this.topic = topic;
     }
+
+    public void SetId(Long id) {
+        this.reservationId = id;
+    }
 }
 /*
 reservations

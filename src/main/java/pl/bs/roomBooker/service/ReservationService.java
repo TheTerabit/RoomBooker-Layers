@@ -16,12 +16,12 @@ public class ReservationService {
 
     private final ReservationRepository reservationRepository;
     private final TopicRepository topicRepository;
-    private final ReservationValidator reservationValidator;
+    private ReservationValidator reservationValidator;
 
     public ReservationService(ReservationRepository reservationRepository, TopicRepository topicRepository, RoomRepository roomRepository, UserRepository userRepository) {
         this.reservationRepository = reservationRepository;
         this.topicRepository = topicRepository;
-        this.reservationValidator = new ReservationValidator(roomRepository, userRepository);
+        this.reservationValidator = new ReservationValidator(roomRepository, userRepository, reservationRepository);
     }
 
     public Reservation findById(Long id) {
@@ -60,4 +60,8 @@ public class ReservationService {
         return reservationRepository.findAll();
     }
 
+    public void update(Long id, ReservationMsg reservationMsg) throws Exception {
+        reservationValidator.validateUpdate(id, reservationMsg);
+        reservationRepository.update(id, reservationMsg.getTopic(), reservationMsg.getRoomId(), reservationMsg.getStart(), reservationMsg.getEnd());
+    }
 }

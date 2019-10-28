@@ -92,4 +92,8 @@ public class UserService {
     public List<User> getAll() {
         return userRepository.findAll();
     }
+
+    public List<Company> getAllCompanies() {
+        return this.companyRepository.findAll();
+    }
 }

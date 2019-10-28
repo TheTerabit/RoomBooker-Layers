@@ -26,8 +26,7 @@ public class Room {
     private List<Reservation> reservations;
 
 
-    public Room(Long roomId, String name, Integer roomSize) {
-        this.roomId = roomId;
+    public Room(String name, Integer roomSize) {
         this.name = name;
         this.roomSize = roomSize;
     }

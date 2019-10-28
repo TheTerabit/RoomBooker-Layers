@@ -27,7 +27,7 @@ public class RoomService {
 
     public void create(RoomMsg roomMsg) {
         //if()
-        Room room = new Room(roomMsg.getId(),
+        Room room = new Room(
                 roomMsg.getName(),
                 roomMsg.getRoomSize());
         roomRepository.save(room);

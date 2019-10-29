@@ -9,6 +9,7 @@ import pl.bs.roomBooker.repository.room.RoomRepository;
 import pl.bs.roomBooker.repository.user.UserRepository;
 
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -83,15 +84,23 @@ public class ReservationValidator {
     public void validateUpdate(Long id, ReservationMsg reservationMsg) throws Exception {
         this.setReservationMsg(reservationMsg);
         this.authenticateUser();
+        this.checkReservationOwner(id);
         this.checkIfStartBeforeEnd();
         this.checkReservationLength();
         this.checkIfRoomIsFree(id);
-        this.checkReservationOwner(id);
+
     }
 
     private void checkIfRoomIsFree(Long id) throws Exception {
-        List<Reservation> reservations = roomRepository.findById(reservationMsg.getRoomId()).get().getReservations();
-        reservations.remove(id);
+        List<Reservation> reservations = new ArrayList<>(roomRepository.findById(reservationMsg.getRoomId()).get().getReservations());
+
+        Reservation currentReservation = reservations.stream()
+                .filter(reservation -> id.equals(reservation.getReservationId()))
+                .findAny()
+                .orElse(null);
+        boolean check = reservations.remove(currentReservation);
+        System.out.println(check);
+
         if(!checkIfFree(reservationMsg.getStart(), reservationMsg.getEnd(), reservations))
             throw new Exception("The conference room is already occupied.");
     }

@@ -41,8 +41,8 @@ public class ReservationEndpoint {
         this.reservationService.delete(id);
     }
 
-    @PutMapping("/{id}")
-    public void update(@PathVariable("id") Long id, ReservationMsg reservationMsg) throws Exception {
+    @PostMapping("/{id}")
+    public void update(@PathVariable("id") Long id, @RequestBody ReservationMsg reservationMsg) throws Exception {
         this.reservationService.update(id, reservationMsg);
     }
 

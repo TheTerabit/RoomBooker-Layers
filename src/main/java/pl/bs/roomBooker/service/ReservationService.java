@@ -33,12 +33,7 @@ public class ReservationService {
 
         this.reservationValidator.validate(reservationMsg);
 
-        Topic topic = topicRepository.findByTopicName(reservationMsg.getTopic());
-        if(topic == null){
-            topic = new Topic(reservationMsg.getTopic());
-        }
-
-        topicRepository.save(topic);
+        Topic topic = this.createTopic(reservationMsg);
 
 
         Reservation reservation = new Reservation(reservationMsg.getUsername(),
@@ -51,6 +46,17 @@ public class ReservationService {
         reservationRepository.save(reservation);
 
     }
+    private Topic createTopic(ReservationMsg reservationMsg){
+        Topic topic = topicRepository.findByTopicName(reservationMsg.getTopic());
+        if(topic == null){
+            topic = new Topic(reservationMsg.getTopic());
+        }
+
+        topicRepository.save(topic);
+
+        return topic;
+    }
+
 
     public void delete(Long id) {
         reservationRepository.deleteById(id);
@@ -62,6 +68,6 @@ public class ReservationService {
 
     public void update(Long id, ReservationMsg reservationMsg) throws Exception {
         reservationValidator.validateUpdate(id, reservationMsg);
-        reservationRepository.update(id, reservationMsg.getTopic(), reservationMsg.getRoomId(), reservationMsg.getStart(), reservationMsg.getEnd());
+        reservationRepository.update(id, this.createTopic(reservationMsg), reservationMsg.getRoomId(), reservationMsg.getStart(), reservationMsg.getEnd());
     }
 }

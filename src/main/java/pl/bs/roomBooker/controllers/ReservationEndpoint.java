@@ -37,8 +37,8 @@ public class ReservationEndpoint {
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Long id) {
-        this.reservationService.delete(id);
+    public void delete(@PathVariable("id") Long id, @RequestBody ReservationMsg reservationMsg) throws Exception {
+        this.reservationService.delete(id, reservationMsg);
     }
 
     @PostMapping("/{id}")

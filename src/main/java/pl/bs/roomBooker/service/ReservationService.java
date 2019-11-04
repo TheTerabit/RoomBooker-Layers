@@ -58,7 +58,8 @@ public class ReservationService {
     }
 
 
-    public void delete(Long id) {
+    public void delete(Long id, ReservationMsg reservationMsg) throws Exception {
+        reservationValidator.validateDelete(id, reservationMsg);
         reservationRepository.deleteById(id);
     }
 

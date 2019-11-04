@@ -109,5 +109,11 @@ public class ReservationValidator {
         if(!reservationRepository.findById(id).get().getUsername().equals(reservationMsg.getUsername()))
             throw new Exception("You are not the owner of this event");
     }
+
+    public void validateDelete(Long id, ReservationMsg reservationMsg) throws Exception {
+        this.setReservationMsg(reservationMsg);
+        this.authenticateUser();
+        this.checkReservationOwner(id);
+    }
 }
 

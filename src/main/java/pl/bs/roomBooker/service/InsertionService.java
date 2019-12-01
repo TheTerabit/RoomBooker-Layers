@@ -6,6 +6,11 @@ import pl.bs.roomBooker.controllers.msg.UserMsg;
 import pl.bs.roomBooker.models.user.Company;
 import pl.bs.roomBooker.repository.user.CompanyRepository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.StoredProcedureQuery;
+
 @Service
 public class InsertionService {
 
@@ -21,9 +26,20 @@ public class InsertionService {
 
 
     public void initData(){
+        this.deleteAll();
         this.insertUsers();
         this.insertRooms();
         this.insertCopanies();
+
+    }
+
+    private void deleteAll() {
+        EntityManagerFactory factory = null;
+        EntityManager entityManager = null;
+        factory = Persistence.createEntityManagerFactory("room_booker");
+        entityManager = factory.createEntityManager();
+        StoredProcedureQuery findByYearProcedure = entityManager.createNamedStoredProcedureQuery("filldb");
+        findByYearProcedure.execute();
     }
 
     private void insertCopanies() {

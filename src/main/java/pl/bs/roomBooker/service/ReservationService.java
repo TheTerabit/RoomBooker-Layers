@@ -9,6 +9,10 @@ import pl.bs.roomBooker.repository.reservation.TopicRepository;
 import pl.bs.roomBooker.repository.room.RoomRepository;
 import pl.bs.roomBooker.repository.user.UserRepository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.StoredProcedureQuery;
 import java.util.List;
 
 @Service
@@ -49,6 +53,17 @@ public class ReservationService {
     private Topic createTopic(ReservationMsg reservationMsg){
         Topic topic = topicRepository.findByTopicName(reservationMsg.getTopic());
         if(topic == null){
+            /*EntityManagerFactory factory = null;
+            EntityManager entityManager = null;
+            factory = Persistence.createEntityManagerFactory("jpa-db");
+            entityManager = factory.createEntityManager();
+            StoredProcedureQuery findByYearProcedure =
+                    entityManager.createNamedStoredProcedureQuery("findByYearProcedure");
+
+            StoredProcedureQuery storedProcedure =
+                    findByYearProcedure.setParameter("p_year", 2015);
+
+            */
             topic = new Topic(reservationMsg.getTopic());
         }
 

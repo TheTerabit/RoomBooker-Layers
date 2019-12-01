@@ -3,6 +3,11 @@ package pl.bs.roomBooker.models.reservation;
 import javax.persistence.*;
 
 @Entity
+@NamedStoredProcedureQueries({
+        @NamedStoredProcedureQuery(
+                name = "filldb",
+                procedureName = "filldb")
+})
 public class Topic {
 
     @Id

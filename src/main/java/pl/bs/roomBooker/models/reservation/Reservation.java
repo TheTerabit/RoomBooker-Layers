@@ -17,7 +17,7 @@ public class Reservation {
     @Column(name = "id")
     private Long reservationId;
 
-    @Column(name = "userId")
+    @Column(name = "username")
     private String username;
 
     @Column(name = "roomId")

@@ -83,12 +83,12 @@ public class InsertionService {
 
     private void insertUsers(){
         this.userService.create(new UserMsg("maluch126p",
-                "Paweł",
-                "Korbaczyński",
+                "Pawel",
+                "Korbaczynski",
                 "password1",
-                "Starołęka",
+                "Staroleka",
                 "1/1",
-                "Poznań",
+                "Poznan",
                 "Polska",
                 "pawel.korbaczynski@student.put.poznan.pl",
                 "111111111",

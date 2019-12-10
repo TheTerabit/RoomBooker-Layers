@@ -22,7 +22,7 @@ public class Room {
     private RoomLocation roomLocation;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name="roomId", referencedColumnName = "id")
+    @JoinColumn(name="room_id", referencedColumnName = "id")
     private List<Reservation> reservations;
 
 

@@ -6,16 +6,25 @@ import javax.persistence.*;
 @NamedStoredProcedureQueries({
         @NamedStoredProcedureQuery(
                 name = "filldb",
-                procedureName = "filldb")
+                procedureName = "filldb"),
+        @NamedStoredProcedureQuery(
+                name = "myProcedure",
+                procedureName = "myProcedure",
+                resultClasses = {Topic.class}),
+        @NamedStoredProcedureQuery(
+                name = "get_all_reservations",
+                procedureName = "get_all_reservations",
+                resultClasses = {Reservation.class})
 })
+
 public class Topic {
 
     @Id
     @SequenceGenerator(name = "myTopicSeqGen", sequenceName = "myTopicSeq", initialValue = 0, allocationSize = 100)
     @GeneratedValue(generator = "myTopicSeqGen")
-    @Column(name = "topicId")
+    @Column(name = "topic_id")
     private Long topicId;
-    @Column(unique=true)
+    @Column(unique=true, name = "topic_name")
     private String topicName;
 
     public Topic() {

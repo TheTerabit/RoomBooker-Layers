@@ -20,14 +20,14 @@ public class Reservation {
     @Column(name = "username")
     private String username;
 
-    @Column(name = "roomId")
+    @Column(name = "room_id")
     private Long roomId;
 
     private ZonedDateTime start;
     private ZonedDateTime end;
 
     @ManyToOne
-    @JoinColumn(name = "topicId")
+    @JoinColumn(name = "topic_id")
     private Topic topic;
 
     public Reservation() {

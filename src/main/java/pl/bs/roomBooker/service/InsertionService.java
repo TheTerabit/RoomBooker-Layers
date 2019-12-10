@@ -3,6 +3,7 @@ package pl.bs.roomBooker.service;
 import org.springframework.stereotype.Service;
 import pl.bs.roomBooker.controllers.msg.RoomMsg;
 import pl.bs.roomBooker.controllers.msg.UserMsg;
+import pl.bs.roomBooker.models.reservation.Topic;
 import pl.bs.roomBooker.models.user.Company;
 import pl.bs.roomBooker.repository.user.CompanyRepository;
 
@@ -10,6 +11,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.StoredProcedureQuery;
+import java.util.List;
 
 @Service
 public class InsertionService {
@@ -38,8 +40,23 @@ public class InsertionService {
         EntityManager entityManager = null;
         factory = Persistence.createEntityManagerFactory("room_booker");
         entityManager = factory.createEntityManager();
-        StoredProcedureQuery findByYearProcedure = entityManager.createNamedStoredProcedureQuery("filldb");
+
+
+        StoredProcedureQuery findByYearProcedure = entityManager.createNamedStoredProcedureQuery("myProcedure");
         findByYearProcedure.execute();
+        List<Topic> result =  findByYearProcedure.getResultList();
+        for(Topic i : result)
+            System.out.println(i.getTopicName());
+
+
+
+        findByYearProcedure = entityManager.createNamedStoredProcedureQuery("filldb");
+        findByYearProcedure.execute();
+
+
+
+
+
     }
 
     private void insertCopanies() {

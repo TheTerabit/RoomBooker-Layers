@@ -12,6 +12,7 @@ Web app for  booking conference rooms
 ![Diagram](https://github.com/TheTerabit/RoomBooker-Layers/blob/master/diagram.png)
 
 ### TODO:
+- Deploy web app
 - Unit tests
 - OAuth2
 - Rewrite project using TDD and DDD

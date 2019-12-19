@@ -5,7 +5,7 @@
 Web app for  booking conference rooms
 
 ### Frontend available here:
-<a href="https://github.com/Pefes"><img src="https://avatars2.githubusercontent.com/u/56848101?s=400&v=4" title="Pefes" width="80" height="80"></a>
+<a href="https://github.com/Pefes/RoomBooker"><img src="https://avatars2.githubusercontent.com/u/56848101?s=400&v=4" title="Pefes" width="80" height="80"></a>
 
 ### Database schema: 
 

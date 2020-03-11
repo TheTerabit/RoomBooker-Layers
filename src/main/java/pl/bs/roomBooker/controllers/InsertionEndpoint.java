@@ -13,7 +13,7 @@ public class InsertionEndpoint {
         this.insertionService = insertionService;
     }
 
-    @GetMapping
+    @GetMapping("/insert")
     public void initData(){
         this.insertionService.initData();
     }

@@ -1,10 +1,14 @@
 # RoomBooker-Layers
 
-## Java / Spring / JPA / MySQL
+## Java / Spring / REST / JPA / MySQL
 
-Web app for  booking conference rooms
+Web app for booking conference rooms
 
-### Frontend available here:
+## Check this out:
+
+### https://room-booker-front.herokuapp.com/home
+
+### Front-end available here:
 <a href="https://github.com/Pefes/RoomBooker"><img src="https://avatars2.githubusercontent.com/u/56848101?s=400&v=4" title="Pefes" width="80" height="80"></a>
 
 ### Database schema: 
@@ -12,10 +16,9 @@ Web app for  booking conference rooms
 ![Diagram](https://github.com/TheTerabit/RoomBooker-Layers/blob/master/diagram.png)
 
 ### TODO:
-- Deploy web app
 - Unit tests
-- OAuth2
-- Rewrite project using TDD and DDD
+- JWT
+- Rewrite project using TDD and hexagonal architecture
 
 
 

@@ -14,7 +14,6 @@ public class Reservation {
     @Id
     @SequenceGenerator(name = "myReservationGen", sequenceName = "myReservationSeq", initialValue = 0, allocationSize = 100)
     @GeneratedValue(generator = "myReservationGen")
-    @Column(name = "id")
     private Long reservationId;
 
     @Column(name = "username")

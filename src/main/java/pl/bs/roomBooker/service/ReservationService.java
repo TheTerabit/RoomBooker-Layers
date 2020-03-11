@@ -79,17 +79,7 @@ public class ReservationService {
     }
 
     public List<Reservation> getAll() {
-        EntityManagerFactory factory = null;
-        EntityManager entityManager = null;
-        factory = Persistence.createEntityManagerFactory("room_booker");
-        entityManager = factory.createEntityManager();
-
-
-        StoredProcedureQuery findByYearProcedure = entityManager.createNamedStoredProcedureQuery("get_all_reservations");
-        findByYearProcedure.execute();
-        List<Reservation> result =  findByYearProcedure.getResultList();
-        return result;
-        //return reservationRepository.findAll();
+        return reservationRepository.findAll();
     }
 
     public void update(Long id, ReservationMsg reservationMsg) throws Exception {

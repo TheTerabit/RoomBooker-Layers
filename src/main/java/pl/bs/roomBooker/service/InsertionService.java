@@ -36,27 +36,7 @@ public class InsertionService {
     }
 
     private void deleteAll() {
-        EntityManagerFactory factory = null;
-        EntityManager entityManager = null;
-        factory = Persistence.createEntityManagerFactory("room_booker");
-        entityManager = factory.createEntityManager();
-
-
-        StoredProcedureQuery findByYearProcedure = entityManager.createNamedStoredProcedureQuery("myProcedure");
-        findByYearProcedure.execute();
-        List<Topic> result =  findByYearProcedure.getResultList();
-        for(Topic i : result)
-            System.out.println(i.getTopicName());
-
-
-
-        findByYearProcedure = entityManager.createNamedStoredProcedureQuery("filldb");
-        findByYearProcedure.execute();
-
-
-
-
-
+        //deleteAll
     }
 
     private void insertCopanies() {

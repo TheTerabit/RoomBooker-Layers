@@ -40,9 +40,6 @@ public class ReservationValidator {
     }
 
     private void authenticateUser() throws AuthenticationFailureException {
-        for (User i : this.userRepository.findAll()){
-            System.out.println(i.getUsername());
-        }
         if(!this.reservationMsg.getPassword().equals(this.userRepository.findByUsername(reservationMsg.getUsername()).get().getUserPassword().getPassword()))
             throw new AuthenticationFailureException();
     }

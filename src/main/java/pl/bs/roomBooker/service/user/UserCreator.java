@@ -25,10 +25,12 @@ class UserCreator {
         createJobTitleIfNotExist();
         createCompanyIfNotExist();
         createUser();
+        saveUser();
         createUserPassword();
         createUserAddress();
         createUserContact();
-        saveUser();
+        saveUserDetails();
+
     }
 
     private void setUserMsg(UserMsg userMsg) {
@@ -57,7 +59,6 @@ class UserCreator {
                 userMsg.getSurname());
         user.setCompany(company);
         user.setJobTitle(jobTitle);
-        userDao.saveUser(user);
         this.user = user;
     }
 
@@ -87,9 +88,14 @@ class UserCreator {
         userDao.saveJobTitle(jobTitle);
         userDao.saveCompany(company);
         userDao.saveUser(user);
+
+    }
+
+    private void saveUserDetails() {
         userDao.saveUserPassword(userPassword);
         userDao.saveUserAddress(userAddress);
         userDao.saveUserContact(userContact);
     }
+
 
 }

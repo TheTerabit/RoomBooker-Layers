@@ -46,39 +46,4 @@ public class UserMsg {
         this.companyName = companyName;
         this.jobTitleName = jobTitleName;
     }
-
 }
-/*
-Users
--	userId
--	name
--	surname
--	companyId
--	jobTitleId
-
-
-passwords
--	userId
--	password
-userAddresses
-- userId
-- street
-- numer
-- City
-- country
-
-userContacts
-- userId
-- userEmail
-- userPhoneNumber
-
-
-Companies
-- companyId
-- companyName
-
-Jobtitles
-- jobTitleId
-- jobTitleName
-
- */

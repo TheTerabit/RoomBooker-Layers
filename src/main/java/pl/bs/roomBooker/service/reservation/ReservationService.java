@@ -1,4 +1,4 @@
-package pl.bs.roomBooker.service;
+package pl.bs.roomBooker.service.reservation;
 
 import org.springframework.stereotype.Service;
 import pl.bs.roomBooker.controllers.msg.ReservationMsg;
@@ -9,10 +9,7 @@ import pl.bs.roomBooker.repository.reservation.TopicRepository;
 import pl.bs.roomBooker.repository.room.RoomRepository;
 import pl.bs.roomBooker.repository.user.UserRepository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.StoredProcedureQuery;
+
 import java.util.List;
 
 @Service
@@ -22,7 +19,10 @@ public class ReservationService {
     private final TopicRepository topicRepository;
     private ReservationValidator reservationValidator;
 
-    public ReservationService(ReservationRepository reservationRepository, TopicRepository topicRepository, RoomRepository roomRepository, UserRepository userRepository) {
+    public ReservationService(ReservationRepository reservationRepository,
+                              TopicRepository topicRepository,
+                              RoomRepository roomRepository,
+                              UserRepository userRepository) {
         this.reservationRepository = reservationRepository;
         this.topicRepository = topicRepository;
         this.reservationValidator = new ReservationValidator(roomRepository, userRepository, reservationRepository);
@@ -30,7 +30,7 @@ public class ReservationService {
 
     public Reservation findById(Long id) {
         return reservationRepository.findById(id)
-                .orElseThrow(() -> new NotFoundReservationException(String.format("Reservation %s does not exist", id)));
+                .orElseThrow(() -> new ReservationNotFoundException(String.format("Reservation %s does not exist", id)));
     }
 
     public void create(ReservationMsg reservationMsg) throws Exception {

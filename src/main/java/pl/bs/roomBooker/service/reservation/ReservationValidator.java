@@ -1,4 +1,4 @@
-package pl.bs.roomBooker.service;
+package pl.bs.roomBooker.service.reservation;
 
 import org.springframework.stereotype.Service;
 import pl.bs.roomBooker.controllers.msg.ReservationMsg;

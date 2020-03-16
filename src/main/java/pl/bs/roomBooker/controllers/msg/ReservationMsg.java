@@ -8,6 +8,7 @@ import java.time.ZonedDateTime;
 
 @Getter
 public class ReservationMsg {
+
     private final String username;
     private final String password;
     private final Long roomId;

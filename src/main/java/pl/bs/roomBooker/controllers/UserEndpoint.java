@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.bs.roomBooker.controllers.msg.UserMsg;
 import pl.bs.roomBooker.models.user.Company;
 import pl.bs.roomBooker.models.user.User;
-import pl.bs.roomBooker.service.UserService;
+import pl.bs.roomBooker.service.user.UserService;
 
 import java.util.List;
 
@@ -20,26 +20,26 @@ public class UserEndpoint {
 
     @GetMapping
     public List<User> getAll() {
-        return this.userService.getAll();
+        return userService.getAll();
     }
 
     @PostMapping
     public void create(@RequestBody UserMsg userMsg) {
-        this.userService.create(userMsg);
+        userService.create(userMsg);
     }
 
     @GetMapping("/{id}")
     public User findById(@PathVariable("id") Long id) {
-        return this.userService.findById(id);
+        return userService.findById(id);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Long id) {
-        this.userService.delete(id);
+        userService.delete(id);
     }
 
     @GetMapping("/new")
     public List<Company> findAllCompanies(){
-        return this.userService.getAllCompanies();
+        return userService.getAllCompanies();
     }
 }

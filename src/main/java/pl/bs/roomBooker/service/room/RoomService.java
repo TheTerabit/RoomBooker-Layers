@@ -1,4 +1,4 @@
-package pl.bs.roomBooker.service;
+package pl.bs.roomBooker.service.room;
 
 import org.springframework.stereotype.Service;
 import pl.bs.roomBooker.controllers.msg.RoomMsg;
@@ -22,16 +22,14 @@ public class RoomService {
 
     public Room findById(Long id) {
         return roomRepository.findById(id)
-                .orElseThrow(() -> new NotFoundRoomException(String.format("Room %s does not exist", id)));
+                .orElseThrow(() -> new RoomNotFoundException(String.format("Room %s does not exist", id)));
     }
 
     public void create(RoomMsg roomMsg) {
-        //if()
         Room room = new Room(
                 roomMsg.getName(),
                 roomMsg.getRoomSize());
         roomRepository.save(room);
-
         roomLocationRepository.save(new RoomLocation(room.getRoomId(),
                                                 roomMsg.getFloor(),
                                                 roomMsg.getSector()));

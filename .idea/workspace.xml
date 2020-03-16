@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3908f897-2c3c-4a95-a446-def465108784" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/room/RoomNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/user/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/user/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/user/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/AuthenticationFailureException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/OccupiedRoomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/WrongMeetingTimeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/WrongUserException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/InsertionEndpoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/ReservationEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/ReservationEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/RoomEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/RoomEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/UserEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/UserEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/ReservationMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/ReservationMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/UserMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/UserMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/InsertionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/NotFoundReservationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/NotFoundRoomException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/NotFoundUserException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/ReservationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/room/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/user/UserCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationValidator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +19,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="53" column="81" lean-forward="true" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+            <state relative-caret-position="-136">
+              <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1530">
+              <caret line="92" column="43" lean-forward="true" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,10 +44,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationValidator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/WrongUserException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="5" column="75" lean-forward="true" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/OccupiedRoomException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="95" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/WrongMeetingTimeException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationNotFoundException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/AuthenticationFailureException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,11 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Topic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/models/Reservation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/user/UserContactRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/NotFoundReservationException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/reservation/TopicRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/RoomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/controllers/msg/RoomMsg.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/repository/user/UserRepository.java" />
@@ -124,6 +166,11 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/NotFoundReservationException.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/AuthenticationFailureException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/WrongMeetingTimeException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/OccupiedRoomException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/WrongUserException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationValidator.java" />
       </list>
     </option>
   </component>
@@ -325,7 +372,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584359120995" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584365281753" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -405,12 +452,12 @@
       <workItem from="1583869569809" duration="4598000" />
       <workItem from="1584015457247" duration="889000" />
       <workItem from="1584020275547" duration="1142000" />
-      <workItem from="1584347327869" duration="11127000" />
+      <workItem from="1584347327869" duration="16014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114361000" />
+    <option name="totallyTimeSpent" value="119248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
@@ -441,7 +488,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32909605" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32909605" />
-      <window_info anchor="bottom" id="Terminal" order="15" weight="0.24717514" />
+      <window_info anchor="bottom" id="Terminal" order="15" visible="true" weight="0.24717514" />
       <window_info anchor="bottom" id="Messages" order="16" weight="0.32909605" />
       <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="17" />
       <window_info anchor="bottom" id="Azure Activity Log" order="18" />
@@ -461,34 +508,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.26/tomcat-embed-core-9.0.26.jar!/org/apache/catalina/valves/ErrorReportValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.26/tomcat-embed-core-9.0.26.jar!/org/apache/catalina/core/StandardEngineValve.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.26/tomcat-embed-core-9.0.26.jar!/org/apache/catalina/connector/CoyoteAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="338" selection-start-line="338" selection-end-line="338" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.26/tomcat-embed-core-9.0.26.jar!/org/apache/coyote/http11/Http11Processor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="256" selection-start-line="256" selection-end-line="256" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.26/tomcat-embed-core-9.0.26.jar!/org/apache/coyote/AbstractProcessorLight.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -855,20 +874,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationNotFoundException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/AuthenticationFailureException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationValidator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/WrongMeetingTimeException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -877,8 +906,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="53" column="81" lean-forward="true" selection-start-line="53" selection-start-column="81" selection-end-line="53" selection-end-column="81" />
+        <state relative-caret-position="-136">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/OccupiedRoomException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/WrongUserException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="75" lean-forward="true" selection-start-line="5" selection-start-column="75" selection-end-line="5" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/bs/roomBooker/service/reservation/ReservationValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="92" column="43" lean-forward="true" selection-start-line="92" selection-start-column="43" selection-end-line="92" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

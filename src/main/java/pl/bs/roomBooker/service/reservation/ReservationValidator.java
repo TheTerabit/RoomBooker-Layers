@@ -28,32 +28,46 @@ public class ReservationValidator {
     }
 
     public void validate(ReservationMsg reservationMsg) throws Exception {
-        this.setReservationMsg(reservationMsg);
-        this.authenticateUser();
-        this.checkIfStartBeforeEnd();
-        this.checkReservationLength();
-        this.checkIfRoomIsFree();
+        setReservationMsg(reservationMsg);
+        authenticateUser();
+        checkIfStartBeforeEnd();
+        checkReservationLength();
+        checkIfRoomIsFree();
     }
 
     private void setReservationMsg(ReservationMsg reservationMsg) {
         this.reservationMsg = reservationMsg;
     }
 
-    private void checkIfStartBeforeEnd() throws Exception {
+    private void authenticateUser() throws AuthenticationFailureException {
+        for (User i : this.userRepository.findAll()){
+            System.out.println(i.getUsername());
+        }
+        if(!this.reservationMsg.getPassword().equals(this.userRepository.findByUsername(reservationMsg.getUsername()).get().getUserPassword().getPassword()))
+            throw new AuthenticationFailureException();
+    }
+
+    private void checkIfStartBeforeEnd() throws WrongMeetingTimeException {
         if(reservationMsg.getStart().isAfter(reservationMsg.getEnd()))
-            throw new Exception("End of the meeting must be after its start.");
+            throw new WrongMeetingTimeException("End of the meeting must be after its start.");
     }
 
-    private void checkReservationLength() throws Exception {
-        if(!this.checkEventLength(reservationMsg.getStart(), reservationMsg.getEnd()))
-            throw new Exception("Duration of the meeting must be 15 - 120 minutes.");
+    private void checkReservationLength() throws WrongMeetingTimeException {
+        if(!this.checkIfMeetingLengthIsOk(reservationMsg.getStart(), reservationMsg.getEnd()))
+            throw new WrongMeetingTimeException("Duration of the meeting must be 15 - 120 minutes.");
     }
 
-    private void checkIfRoomIsFree() throws Exception {
-        System.out.println(reservationMsg.getStart() + " " + reservationMsg.getEnd());
-        System.out.println(reservationMsg.getRoomId() + " " + roomRepository.findById(reservationMsg.getRoomId()));
+    private boolean checkIfMeetingLengthIsOk(ZonedDateTime start, ZonedDateTime end) {
+        long eventLength = end.toInstant().toEpochMilli() - start.toInstant().toEpochMilli();
+        if((eventLength >= TimeUnit.MINUTES.toMillis(15))&&(eventLength <= TimeUnit.MINUTES.toMillis(120)))
+            return true;
+        else
+            return false;
+    }
+
+    private void checkIfRoomIsFree() throws OccupiedRoomException {
         if(!checkIfFree(reservationMsg.getStart(), reservationMsg.getEnd(), roomRepository.findById(reservationMsg.getRoomId()).get().getReservations()))
-            throw new Exception("The conference room is already occupied.");
+            throw new OccupiedRoomException();
     }
 
     private boolean checkIfFree(ZonedDateTime start, ZonedDateTime end, List<Reservation> allReservations){//stream
@@ -63,23 +77,6 @@ public class ReservationValidator {
         }
         return true;
     }
-
-    private boolean checkEventLength(ZonedDateTime start, ZonedDateTime end){
-        long eventLength=end.toInstant().toEpochMilli()-start.toInstant().toEpochMilli();
-        if((eventLength >= TimeUnit.MINUTES.toMillis(15))&&(eventLength <= TimeUnit.MINUTES.toMillis(120)))
-            return true;
-        else
-            return false;
-    }
-
-    private void authenticateUser() throws Exception {
-        for (User i : this.userRepository.findAll()){
-            System.out.println(i.getUsername());
-        }
-        if(!this.reservationMsg.getPassword().equals(this.userRepository.findByUsername(reservationMsg.getUsername()).get().getUserPassword().getPassword()))
-            throw new Exception("Wrong username or password.");
-    }
-
 
     public void validateUpdate(Long id, ReservationMsg reservationMsg) throws Exception {
         this.setReservationMsg(reservationMsg);
@@ -91,23 +88,21 @@ public class ReservationValidator {
 
     }
 
-    private void checkIfRoomIsFree(Long id) throws Exception {
-        List<Reservation> reservations = new ArrayList<>(roomRepository.findById(reservationMsg.getRoomId()).get().getReservations());
+    private void checkReservationOwner(Long id) throws WrongUserException {
+        if(!reservationRepository.findById(id).get().getUsername().equals(reservationMsg.getUsername()))
+            throw new WrongUserException();
+    }
 
+    private void checkIfRoomIsFree(Long id) throws OccupiedRoomException {
+        List<Reservation> reservations = new ArrayList<>(roomRepository.findById(reservationMsg.getRoomId()).get().getReservations());
         Reservation currentReservation = reservations.stream()
                 .filter(reservation -> id.equals(reservation.getReservationId()))
                 .findAny()
                 .orElse(null);
-        boolean check = reservations.remove(currentReservation);
-        System.out.println(check);
+        reservations.remove(currentReservation);
 
         if(!checkIfFree(reservationMsg.getStart(), reservationMsg.getEnd(), reservations))
-            throw new Exception("The conference room is already occupied.");
-    }
-
-    private void checkReservationOwner(Long id) throws Exception {
-        if(!reservationRepository.findById(id).get().getUsername().equals(reservationMsg.getUsername()))
-            throw new Exception("You are not the owner of this event");
+            throw new OccupiedRoomException();
     }
 
     public void validateDelete(Long id, ReservationMsg reservationMsg) throws Exception {
@@ -115,5 +110,6 @@ public class ReservationValidator {
         this.authenticateUser();
         this.checkReservationOwner(id);
     }
+
 }
 

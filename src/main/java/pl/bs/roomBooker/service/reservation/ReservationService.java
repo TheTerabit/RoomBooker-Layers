@@ -9,7 +9,6 @@ import pl.bs.roomBooker.repository.reservation.TopicRepository;
 import pl.bs.roomBooker.repository.room.RoomRepository;
 import pl.bs.roomBooker.repository.user.UserRepository;
 
-
 import java.util.List;
 
 @Service
@@ -17,7 +16,7 @@ public class ReservationService {
 
     private final ReservationRepository reservationRepository;
     private final TopicRepository topicRepository;
-    private ReservationValidator reservationValidator;
+    private final ReservationValidator reservationValidator;
 
     public ReservationService(ReservationRepository reservationRepository,
                               TopicRepository topicRepository,
@@ -34,44 +33,29 @@ public class ReservationService {
     }
 
     public void create(ReservationMsg reservationMsg) throws Exception {
-
-        this.reservationValidator.validate(reservationMsg);
-
-        Topic topic = this.createTopic(reservationMsg);
-
-
-        Reservation reservation = new Reservation(reservationMsg.getUsername(),
-                                        reservationMsg.getRoomId(),
-                                        reservationMsg.getStart(),
-                                        reservationMsg.getEnd());
-
-        reservation.setTopic(topic);
-
+        reservationValidator.validate(reservationMsg);
+        Topic topic = createTopic(reservationMsg);
+        Reservation reservation = createReservation(reservationMsg, topic);
         reservationRepository.save(reservation);
-
     }
+
     private Topic createTopic(ReservationMsg reservationMsg){
         Topic topic = topicRepository.findByTopicName(reservationMsg.getTopic());
         if(topic == null){
-            /*EntityManagerFactory factory = null;
-            EntityManager entityManager = null;
-            factory = Persistence.createEntityManagerFactory("jpa-db");
-            entityManager = factory.createEntityManager();
-            StoredProcedureQuery findByYearProcedure =
-                    entityManager.createNamedStoredProcedureQuery("findByYearProcedure");
-
-            StoredProcedureQuery storedProcedure =
-                    findByYearProcedure.setParameter("p_year", 2015);
-
-            */
             topic = new Topic(reservationMsg.getTopic());
         }
-
         topicRepository.save(topic);
-
         return topic;
     }
 
+    private Reservation createReservation(ReservationMsg reservationMsg, Topic topic) {
+        Reservation reservation = new Reservation(reservationMsg.getUsername(),
+                reservationMsg.getRoomId(),
+                reservationMsg.getStart(),
+                reservationMsg.getEnd());
+        reservation.setTopic(topic);
+        return reservation;
+    }
 
     public void delete(Long id, ReservationMsg reservationMsg) throws Exception {
         reservationValidator.validateDelete(id, reservationMsg);
@@ -84,6 +68,6 @@ public class ReservationService {
 
     public void update(Long id, ReservationMsg reservationMsg) throws Exception {
         reservationValidator.validateUpdate(id, reservationMsg);
-        reservationRepository.update(id, this.createTopic(reservationMsg), reservationMsg.getRoomId(), reservationMsg.getStart(), reservationMsg.getEnd());
+        reservationRepository.update(id, createTopic(reservationMsg), reservationMsg.getRoomId(), reservationMsg.getStart(), reservationMsg.getEnd());
     }
 }

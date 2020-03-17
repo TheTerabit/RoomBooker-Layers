@@ -4,7 +4,7 @@
 
 Web app for booking conference rooms
 
-## Check this out:
+## Check it out:
 
 ### https://room-booker-front.herokuapp.com/home
 
